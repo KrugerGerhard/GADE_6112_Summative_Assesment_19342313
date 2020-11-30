@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rougelike_Game
 {
-    class Hero : Character
+    class Hero : Character //class for hero character (player)
     {
         Movement Heromove;
 
@@ -19,7 +19,7 @@ namespace Rougelike_Game
             base.purse = 0;
         }
 
-        public override Movement returnMovement(Movement move)
+        public override Movement returnMovement(Movement move) //hero movement
         {
             if (move == Movement.Up)
             {
@@ -49,7 +49,7 @@ namespace Rougelike_Game
             return Heromove;
         }
 
-        internal void itempickup(Item playeritem)
+        internal void itempickup(Item playeritem) //hero item pick up 
         {
             throw new NotImplementedException();
         }
