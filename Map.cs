@@ -139,6 +139,8 @@ namespace Rougelike_Game
         private int enemyamount;
         private Random r = new Random();
 
+        //Method
+
         private Tile Create(TileType tiletype) 
         {
             int randomx = r.Next(0, Mapwidth);
