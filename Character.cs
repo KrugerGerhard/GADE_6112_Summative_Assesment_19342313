@@ -121,7 +121,6 @@ namespace Rougelike_Game
                 this.X--;
             }
         }
-        public abstract Movement returnMove(Movement move = 0);
 
         public abstract override string ToString();
     }
