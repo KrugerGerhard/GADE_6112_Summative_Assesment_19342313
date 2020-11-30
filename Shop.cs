@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Rougelike_Game
 {
-    class Shop
+    class Shop //class denoting the shop
     {
         public Shop(Character _customer)
         {
-            customer = _customer;
-            rand = new Random();
+            customer = _customer; 
+            rand = new Random(); 
             weapons = new Weapon[4];
             weapons[0] = RandomWeapon();
             weapons[1] = RandomWeapon();
@@ -23,7 +23,7 @@ namespace Rougelike_Game
         private Random rand;
 
 
-        public Weapon RandomWeapon()
+        public Weapon RandomWeapon() //random weapon generation
         {
             int randWeapon = rand.Next(1, 5);
             Weapon weapon;
@@ -45,7 +45,7 @@ namespace Rougelike_Game
             return weapon;
         }
 
-        public bool Buy(int num)
+        public bool Buy(int num) //boolean for an item being brought
         {
             if (customer.Purse >= num)
             {
@@ -70,3 +70,4 @@ namespace Rougelike_Game
         }
     }
 }
+
