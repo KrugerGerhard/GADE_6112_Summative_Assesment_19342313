@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Rougelike_Game
 {
-    class MeleeWeapon : Weapon
+    class MeleeWeapon : Weapon //class denoting different melee weapons
     {
         public MeleeWeapon(WeaponType type, string v, int x, int y) : base (x, y)
         {
-            if (type == WeaponType.Dagger)
+            if (type == WeaponType.Dagger) //dagger weapon type and stats
             {
                 base.Damage = 4;
                 base.Durability = 10;
                 base.Cost = 3;
             }
 
-            if (type == WeaponType.LongSword)
+            if (type == WeaponType.LongSword) //longsword weapon type and stats
             {
                 base.Damage = 4;
                 base.Durability = 6;
