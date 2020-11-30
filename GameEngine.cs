@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Rougelike_Game
 {
 
-    public enum TileType 
+    public enum TileType //enum for denoting types of tile
     {
         Hero,
         Enemy,
@@ -15,7 +15,7 @@ namespace Rougelike_Game
         Weapon,
     }
 
-    public enum movement 
+    public enum movement //enum for movement
     {
         Up,
         Down,
@@ -23,7 +23,7 @@ namespace Rougelike_Game
         Right,
         NoMovement 
     }
-    public enum WeaponType 
+    public enum WeaponType //enum for different weapon types
     {
         Sniper,
         Dagger,
@@ -31,7 +31,7 @@ namespace Rougelike_Game
         LongSword
     }
 
-    class GameEngine 
+    class GameEngine //class for the game engine
     {
         private Map m = new Map(10, 20, 10, 20, 5); 
         public Map M
@@ -40,7 +40,7 @@ namespace Rougelike_Game
             set { M = value; }
         }
 
-        public bool PlayerMove(movement move) 
+        public bool PlayerMove(movement move) //boolean for player movement on map
         {
             if (m.Player.returnMove(move) == movement.NoMovement)
             {
@@ -86,10 +86,10 @@ namespace Rougelike_Game
                     }
                 }
              
-                m.UpdateMap();
+                m.UpdateMap(); //update movement on map
             }
         }
-            public void EnemyAttack()
+            public void EnemyAttack() //enemy attack mechanic
             {
                 m.UpdateMap();
                 foreach (Enemy e in m.enemies)
