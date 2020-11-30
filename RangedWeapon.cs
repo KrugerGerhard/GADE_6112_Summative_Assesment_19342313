@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Rougelike_Game
 {
-    class RangedWeapon : Weapon
+    class RangedWeapon : Weapon //Long range wepon class
     {
 
         public RangedWeapon(WeaponType type, string v, int x, int y) : base(x, y)
         {
 
-            if (type == WeaponType.Sniper)
+            if (type == WeaponType.Sniper) //Sniper weapon and stats
             {
                 base.Damage = 4;
                 base.range = 2;
@@ -20,7 +20,7 @@ namespace Rougelike_Game
                 base.Cost = 6;
             }
 
-            if (type == WeaponType.Laser)
+            if (type == WeaponType.Laser) //Laser weapon and stats 
             {
                 base.Damage = 5;
                 base.range = 3;
@@ -48,3 +48,5 @@ namespace Rougelike_Game
 
         
     }
+
+
