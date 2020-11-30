@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 namespace Rougelike_Game
 {
     
-    abstract class Enemy : Character
+    abstract class Enemy : Character //class for enemy characters (goblins)
     {
         
-       protected Random generator = new Random();
+       protected Random generator = new Random(); //random generation of enemies 
 
         public Enemy(int x, int y, int HP, int Damage, char Symbol) : base(x, y,'E')
         {
-            this.Hp = HP;
-            this.DAMAGE = Damage;
+            this.Hp = HP; //enemy hp value
+            this.DAMAGE = Damage; //enemy damage value 
             
         }
 
