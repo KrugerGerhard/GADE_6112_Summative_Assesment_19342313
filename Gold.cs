@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Rougelike_Game
 {
-     public class Gold : Item
+     public class Gold : Item //gold class
     {
         private Random rand = new Random();
 
-        private int GoldQuantity;
+        private int GoldQuantity; //integer for gold amount 
         private int randomx;
         private int randomy;
 
@@ -37,3 +37,4 @@ namespace Rougelike_Game
         }
     }
 }
+
