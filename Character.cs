@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rougelike_Game
 {
-    abstract class Character : Tile //
+    abstract class Character : Tile //Tile Class
     {
 
         public Character(int x, int y, char Symbol) : base(x, y, Symbol)
@@ -23,21 +23,21 @@ namespace Rougelike_Game
         protected Tile[] Vision;
 
 
-        public int Hp 
+        public int Hp //integer for HP value
         {
             get => HP;
             set => HP = value;
 
         }
 
-        public int Maxhp 
+        public int Maxhp //integer for maximum HP value
         {
             get => MAXHP;
             set => MAXHP = value;
 
         }
 
-        public int DAMAGE 
+        public int DAMAGE //integer for damage value
         {
             get => Damage;
             set => Damage = value;
@@ -58,12 +58,12 @@ namespace Rougelike_Game
 
         }
 
-        public virtual void Attack(Character Target)
+        public virtual void Attack(Character Target) //attack mechanic
         {
             Target.HP -= this.Damage;
         }
 
-        public bool IsDead()
+        public bool IsDead() //death mechanic
         {
             if(HP <=0)
             {
@@ -75,7 +75,7 @@ namespace Rougelike_Game
             }
         }
 
-        public virtual bool CheckRange (Character Target)
+        public virtual bool CheckRange (Character Target) //bool for identifying if a target is in range
         {
             if (DistanceTo(Target) <=1 && DistanceTo(Target) >= -1)
             {
@@ -88,7 +88,7 @@ namespace Rougelike_Game
             
         }
 
-        internal void PickUp(Weapon weapon)
+        internal void PickUp(Weapon weapon) //Weapon pickup system
         {
             throw new NotImplementedException();
         }
@@ -99,7 +99,7 @@ namespace Rougelike_Game
         }
 
 
-        public void Move(Movement move)
+        public void Move(Movement move) //Movement mechanic
         {
             if (move == Movement.Up)
             {
